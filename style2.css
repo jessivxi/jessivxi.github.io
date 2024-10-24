@@ -1,0 +1,162 @@
+body{
+    background-color: #f7f4ed;
+    font-family: "adelphi-pe-variable",sans-serif;
+    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    color: #0b1957;
+
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+    width: 90vh;
+    height: 100%;
+
+}
+.navbar{
+    display: flex;
+    background-color: #f7f4ed;
+    height:150px;
+    width: 200%;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+
+}
+
+.navbar h1{
+    display: flex;
+    color: #0b1957;
+    
+}
+.img-nav{
+    display: flex;
+    width: 100px;
+    height: 200px;
+
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.banner {
+    display: flex;
+    justify-content: center; /* Centraliza o banner */
+}
+
+.img-banner {
+    display: flex;
+    height: 750px;
+}
+
+.botao {
+    border: solid 1px #d2b3db;
+    border-radius: 20px;
+    color: #f7f4ed;
+    background-color: #d2b3db;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s;
+    height: 40px;
+    width: 60px;
+    margin-top: 20px; /* Espaço entre o banner e o botão */
+}
+
+.container-3 {
+    display: flex;
+    color: #0b1957;
+    margin: 100px;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+.carrossel {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.fotos {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 10px;
+}
+
+.foto {
+    margin: 0 10px; /* Adiciona espaço entre as fotos */
+    height: 250px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+     border-radius: 15px; /* Define o raio das bordas (ajuste conforme necessário) */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+}
+.text-5{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.foto:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+.container-4{
+    display: flex;
+    height: auto;
+}
+.box{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.box-1{
+    display: flex;
+    background-color: #d2b3db;
+    height: 50%;
+    width: 390px;
+    border-radius: 20px;
+    margin: 80px;
+}
+.imagem-coelho{
+    display: flex;
+    justify-content: flex-start;
+    height: 50%;
+    align-items: end;
+}
+.box-2{
+    display: flex;
+    background-color: #d2b3db;
+    justify-content: center;
+    height: 50%;
+    width: 390px;
+    border-radius: 20px;
+    margin: 80px;
+
+    }
+
+.box-3{
+    display: flex;
+    background-color: #d2b3db;
+    height: 50%;
+    width: 390px;
+    border-radius: 20px;
+    margin: 80px;
+
+}
+.imagem-folinha{
+    display: flex;
+    height: 10px;
+    width: 50%;
+    padding: 10px;
+    flex-direction: column-reverse;
+}
+.folha1{
+    display: flex;
+    height: 200px;
+    align-items: center;
+
+
+}

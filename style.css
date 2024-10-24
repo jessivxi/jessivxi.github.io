@@ -1,0 +1,163 @@
+body{
+    background-color: #f7f4ed;
+    font-family: "adelphi-pe-variable",sans-serif;
+    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+    width: 90vh;
+    height: 100%;
+
+}
+.navbar{
+    display: flex;
+    background-color: #f7f4ed;
+    height:150px;
+    width: 200%;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+
+}
+
+.navbar h1{
+    display: flex;
+    color: #0b1957;
+    
+}
+.img-nav{
+    display: flex;
+    width: 100px;
+    height: 200px;
+
+}
+.container-2{
+    display: flex;
+    justify-content: center;
+}
+.banner{
+    display: flex;
+
+}
+.img-banner{
+    display: flex;
+    height: 750px;
+    
+    
+}
+.container-3{
+display: flex;
+justify-content: flex-star;
+
+}
+.text-apresen{
+    display: flex;
+    color: #0b1957;
+    
+}
+.titulo h1{
+    display: flex;
+    font-size: 70px;
+
+}
+    .text-1{
+        display: flex;
+        font-size: 20px;
+    }
+    
+.imagem-perfil{
+    display: flex;
+    height: 500px;
+    
+}
+.container-4 {
+    display: flex;
+    color: #d2b3db;
+    flex-direction: column;
+    font-size: 30px;
+    background-color:#0b1957;
+    border-radius: 20px;
+}
+
+.carrossel {
+    position: relative;
+    overflow: hidden; /* Esconde fotos que estão fora do viewport */
+    height: 500px; /* Mantém a altura */
+}
+
+.fotos {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 10px;
+    justify-content: center;
+    transition: transform 0.5s ease; /* Transição suave ao mover as fotos */
+}
+
+.foto {
+    margin: 0 10px; /* Adiciona espaço entre as fotos */
+    height: 200px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    border-radius: 15px; /* Define o raio das bordas (ajuste conforme necessário) */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+}
+
+.text-5{
+    display: flex;
+    justify-content: center;
+}
+
+.foto:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+
+
+.container-5{
+    display: flex;
+    justify-content: center; /* Adicione isso para centralizar os itens dentro */
+    width: 100%; /* Defina uma largura para que a centralização funcione */
+    margin: 0 auto; /* Isso centraliza o contêiner na página */
+    padding: 0
+    
+}
+.fundo-lilas{
+    display: flex;
+    justify-content: center;
+}
+.img-cueio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 180px;
+    
+
+}
+.img-cueio p{
+    display: flex;
+    font-size: 25px;
+    text-align: center;
+    color: #0b1957;
+    
+
+}
+.botao{
+    border: solid 1px #d2b3db;
+    border-radius: 20px;
+    color: #f7f4ed;
+    background-color:#d2b3db;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s;
+    height: 40px;
+    width: 160px;
+
+    
+}
+.botao:hover{
+    background-color: #0b1957;
+    color: #f7f4ed;
+    transform: scale(1.2)
+}
+
+
