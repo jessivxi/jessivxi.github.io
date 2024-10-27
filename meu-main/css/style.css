@@ -144,6 +144,10 @@ justify-content: flex-star;
 
 }
 .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     border: solid 1px #d2b3db;
     border-radius: 20px;
     color: #f7f4ed;
