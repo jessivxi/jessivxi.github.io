@@ -18,7 +18,7 @@ body, ul, li, a {
   .navbar {
     display: flex;
     align-items: center;
-    background-color: #69beb0;
+    background-color: #0c0408;
     color: #fff;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
@@ -50,7 +50,7 @@ body, ul, li, a {
   }
   
   .navbar-links a {
-    color: #262628;
+    color: #ffffff;
     font-size: 17px;
     transition: color 0.3s;
   }
@@ -72,15 +72,14 @@ body, ul, li, a {
 
 .text-apresen{
     display: flex;
-    color:#69beb0;
-    padding: 0px 0px 0px 0px;
+    color:#fafafa;
     
     
 }
 .text-about-1 h1{
     display: flex;
     font-size: 65px;
-    padding: 155px 0px 0px 0px;
+    padding: 115px 0px 0px 0px;
 
 }
 
@@ -90,18 +89,28 @@ body, ul, li, a {
     color: #fff;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
+   
 }
     .about-me-text-2{
     display: flex;
-    font-size: 20px;
-    padding: 0px 0px 30px 0px;
+    font-size: 17px;
+    padding: 0px 0px 15px 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fffcfe;
 }
+
+/* Nova div pai para a foto de perfil */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0;
+}
+
 .imagem-perfil{
     display: flex;
     align-items: center;
-    padding: 200px 150px 0px 0px;
+    padding: 180px 150px 0px 0px;
 }
     
 .foto-perfil-jessi{
@@ -109,7 +118,7 @@ body, ul, li, a {
     width:300px; /* Ajuste o tamanho conforme necessário */
     height:300px; /* Certifique-se de que a imagem seja quadrada */
     border-radius: 50%; /* Isso faz a imagem ficar redonda */
-    box-shadow: 0 2px 25px #69beb0; /* Sombra suave */
+    box-shadow: 0 2px 25px #0f0404; /* Sombra suave */
     
 
 }
@@ -118,7 +127,8 @@ body, ul, li, a {
     text-align: center;
     height: auto;
     width: 100%;
-    gap: 13%;
+    gap: 17%;
+    padding: 9px 0px 0px 0px;
 
 }
 .box-1{
@@ -157,10 +167,29 @@ body, ul, li, a {
 .text-box-2{
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 35px;
+    padding: 0px 0px 0px 36px;
 }
 .text-box-3{
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 35px;
+    padding: 0px 0px 0px 38px;
 }
+
+.box-1:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    background-color: #3a3a3a; /* Mudança de cor de fundo */
+    cursor: pointer;
+
+  }
+.box-2:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    background-color: #3a3a3a; /* Mudança de cor de fundo */
+    cursor: pointer;
+
+  }
+.box-3:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    background-color: #3a3a3a; /* Mudança de cor de fundo */
+    cursor: pointer;
+
+  }
