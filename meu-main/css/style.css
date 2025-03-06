@@ -21,7 +21,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #0f0404;
+    background-color: #000000;
     color: #fff;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
@@ -75,7 +75,7 @@ body {
     color: #fafafa;
     align-items: center; /* Alinha os itens verticalmente ao centro */
     gap: 50px; /* Espaço entre a foto e o texto */
-    padding: 150px 0px 0px 250px;
+    padding:135px 0px 0px 250px;
 }
 
 /* Seção de apresentação */
@@ -133,7 +133,7 @@ body {
     height: auto;
     width: 100%;
     gap: 17%;
-    padding: 9px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
 }
 
 .box-1, .box-2, .box-3 {
@@ -149,7 +149,7 @@ body {
 .text-box-1 {
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 57px;
 }
 
 .text-box-2 {
