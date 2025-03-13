@@ -9,7 +9,7 @@ body, ul, li, a {
 
 /* Estilo do corpo */
 body {
-    background-color: #262628;
+    background-color: #fcfcfc;
     font-family: "Roboto", sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #000;
+    background-color: #484f7a;
     color: #fff;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
@@ -26,12 +26,17 @@ body {
     justify-content: space-between;
     border-radius: 50px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 50px;
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 }
 
 .text-header {
     display: flex;
     color: #fff;
     padding: 25px;
+    font-weight: bold;
 }
 
 .navbar-brand a {
@@ -39,7 +44,7 @@ body {
     font-weight: bold;
     color: #fff;
     font-family: "ocr-b-std", monospace;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .navbar-links {
@@ -51,7 +56,6 @@ body {
     color: #ffffff;
     font-size: 17px;
     transition: color 0.3s;
-    font-weight: bold;
 }
 
 .navbar-links a:hover {
@@ -70,121 +74,63 @@ body {
     margin-bottom: 30px;
 }
 
-.projetos-container {
+.colunas-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    padding: 170px 0px 0px 0px;
+
 }
 
-.projeto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    background-color: #333;
+.coluna {
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
+
+
 }
 
-.projeto img {
+.coluna::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    height: 100%;
+    background: #a1a3b17a;
+    opacity: 60%;
+    transition: background 0.3s;
+}
+
+.coluna:hover::before {
+    background: rgba(90, 90, 90, 0.7);
 }
 
 .descricao {
-    text-align: left;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #000000;
 }
 
 .descricao h2 {
     font-size: 24px;
-    color: #fff;
     margin-bottom: 10px;
 }
 
 .descricao p {
     font-size: 16px;
-    color: #ccc;
-}
-
-/* Rodapé */
-#footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-container p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.redes-sociais-footer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.redes-sociais-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.redes-sociais-footer a:hover {
-    color: #0f1312;
-}
-
-.to-top {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    transition: color 0.3s;
-}
-
-.to-top:hover {
-    color: #69beb0;
-}
-
-/* Estilo das colunas */
-.colunas-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 50px;
-}
-
-.coluna {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(25% - 20px); /* Quatro colunas com espaçamento */
-    text-align: center;
-}
-
-.coluna h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.coluna p {
-    font-size: 16px;
-    color: #ccc;
 }
