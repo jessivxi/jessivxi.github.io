@@ -1,5 +1,5 @@
 body{
-    background-color: #fcfcfc;
+    background-color: #ededed;
     font-family: "adelphi-pe-variable",sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
     
@@ -38,7 +38,7 @@ body, ul, li, a {
   
   .navbar-brand a {
     font-size: 20px;
-    color: #fff;
+    color: #ededed;
     font-family: "ocr-b-std", monospace;
 
   }
@@ -61,7 +61,6 @@ body, ul, li, a {
   #servicos {
     display: flex;
     padding: 190px 0px 0px 0px;
-    background-color: #262628;
     gap: 50px;
     justify-content: center;
   }

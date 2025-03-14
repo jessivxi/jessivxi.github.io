@@ -12,7 +12,7 @@ body, ul, li, a {
 
 /* Estilo do corpo */
 body {
-    background-color: #fcfcfc;
+    background-color: #ededed;
     font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
 }
@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #484f7a;
-    color: #fff;
+    color: #ededed;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
     height: 45px;
@@ -32,12 +32,11 @@ body {
     border-color: #000000; /* Cor da borda */
     border-width: 2px; /* Largura da borda */
     border-style: solid; /* Estilo da borda */
-
 }
 
 .text-header {
     display: flex;
-    color: #fff;
+    color: #ededed;
     padding: 25px;
 }
 
@@ -55,13 +54,13 @@ body {
 }
 
 .navbar-links a {
-    color: #ffffff;
+    color: #ededed;
     font-size: 17px;
     transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-    color: #fff;
+    color: #ededed;
 }
 
 /* Container principal */
@@ -78,7 +77,7 @@ body {
     color: #000000;
     align-items: center; /* Alinha os itens verticalmente ao centro */
     gap: 50px; /* Espaço entre a foto e o texto */
-    padding:115px 0px 0px 250px;
+    padding: 85px 0px 0px 295px;
 }
 
 /* Seção de apresentação */
@@ -149,7 +148,7 @@ body {
     background-color: #484f7a;
     align-items: center;
     box-shadow: 0 1px 6px #d3d2d2; /* Sombra suave */
-    color: #ffffff;
+    color: #ededed;
     border-color: #000000; /* Cor da borda */
     border-width: 1px; /* Largura da borda */
     border-style: solid; /* Estilo da borda */
@@ -158,23 +157,137 @@ body {
 .text-box-1 {
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 57px;
+    padding: 0px 0px 0px 51px;
 }
 
 .text-box-2 {
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 43px;
+    padding: 0px 0px 0px 42px;
 }
 
 .text-box-3 {
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 46px;
 }
 
 .box-1:hover, .box-2:hover, .box-3:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    background-color: #3a3a3a; /* Mudança de cor de fundo */
+    background-color: #b6b5b5; /* Mudança de cor de fundo */
     cursor: pointer;
+}
+
+.text-box-1:hover, .text-box-2:hover, .text-box-3:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Responsividade para diferentes tamanhos de tela de computadores */
+@media (max-width: 1200px) {
+    .text-apresen {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-about-1 h1 {
+        font-size: 50px;
+    }
+
+    .about-me-text-1 {
+        font-size: 18px;
+    }
+
+    .about-me-text-2 {
+        font-size: 15px;
+    }
+
+    .foto-perfil-jessi {
+        width: 300px;
+        height: 300px;
+    }
+
+    .box-collection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 80%;
+        height: 50px;
+    }
+
+    .text-box-1, .text-box-2, .text-box-3 {
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-2 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .text-apresen {
+        padding: 10px;
+    }
+
+    .text-about-1 h1 {
+        font-size: 40px;
+    }
+
+    .about-me-text-1 {
+        font-size: 16px;
+    }
+
+    .about-me-text-2 {
+        font-size: 14px;
+    }
+
+    .foto-perfil-jessi {
+        width: 200px;
+        height: 200px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 90%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-about-1 h1 {
+        font-size: 30px;
+    }
+
+    .about-me-text-1 {
+        font-size: 14px;
+    }
+
+    .about-me-text-2 {
+        font-size: 12px;
+    }
+
+    .foto-perfil-jessi {
+        width: 150px;
+        height: 150px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 100%;
+        height: 70px;
+    }
 }

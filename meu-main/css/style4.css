@@ -9,7 +9,7 @@ body, ul, li, a {
 
 /* Estilo do corpo */
 body {
-    background-color: #262628;
+    background-color: #ededed;
     font-family: "Roboto", sans-serif;
 }
 
@@ -17,20 +17,22 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #000;
-    color: #fff;
+    background-color: #484f7a;
+    color: #ededed;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
     height: 45px;
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 }
 
 .text-header {
     display: flex;
-    color: #fff;
+    color: #ededed;
     padding: 25px;
 }
 
@@ -48,14 +50,14 @@ body {
 }
 
 .navbar-links a {
-    color: #ffffff;
+    color: #ededed;
     font-size: 17px;
     transition: color 0.3s;
     font-weight: bold;
 }
 
 .navbar-links a:hover {
-    color: #fff;
+    color: #ededed;
 }
 
 /* Seção de Projetos */
@@ -64,11 +66,6 @@ body {
     text-align: center;
 }
 
-.projetos h1 {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 30px;
-}
 
 .projetos-container {
     display: flex;
@@ -101,13 +98,13 @@ body {
 
 .descricao h2 {
     font-size: 24px;
-    color: #fff;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 .descricao p {
     font-size: 16px;
-    color: #ccc;
+    color: #484f7a;
 }
 
 /* Estilo das colunas */
@@ -116,18 +113,22 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 50px;
+    padding: 85px 0px 0px 100px;
 }
 
 .coluna {
-    background-color: #333;
-    color: #fff;
+    background-color: #e0dede;
+    color: #000000;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(25% - 20px); /* Quatro colunas com espaçamento */
     text-align: center;
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 }
+
 
 .coluna h2 {
     font-size: 24px;
@@ -136,7 +137,7 @@ body {
 
 .coluna p {
     font-size: 16px;
-    color: #ccc;
+    color: #484f7a;
 }
 
 .coluna img {
@@ -148,6 +149,6 @@ body {
 
 .coluna:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    background-color: #3a3a3a; /* Mudança de cor de fundo */
+    background-color: #b6b5b5; /* Mudança de cor de fundo */
     cursor: pointer;
 }
