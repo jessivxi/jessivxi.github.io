@@ -12,7 +12,7 @@ body, ul, li, a {
 
 /* Estilo do corpo */
 body {
-    background-color: #262628;
+    background-color: #fcfcfc;
     font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
 }
@@ -21,7 +21,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color: #484f7a;
     color: #fff;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
@@ -29,6 +29,9 @@ body {
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 
 }
 
@@ -72,7 +75,7 @@ body {
 
 .text-apresen {
     display: flex;
-    color: #fafafa;
+    color: #000000;
     align-items: center; /* Alinha os itens verticalmente ao centro */
     gap: 50px; /* Espaço entre a foto e o texto */
     padding:115px 0px 0px 250px;
@@ -92,7 +95,7 @@ body {
 
 .about-me-text-1 {
     font-size: 20px;
-    color: #fff;
+    color: #000000;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
     margin: 10px 0;
@@ -103,7 +106,7 @@ body {
     padding: 0px 0px 15px 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400; /* Usando a variante regular */
-    color: #fffcfe;
+    color: #000000;
 }
 
 /* Nova div pai para a foto de perfil */
@@ -123,7 +126,9 @@ body {
     width: 400px; /* Ajuste o tamanho conforme necessário */
     height: 400px; /* Certifique-se de que a imagem seja quadrada */
     border-radius: 50%; /* Isso faz a imagem ficar redonda */
-    box-shadow: 0 2px 25px #0f0404; /* Sombra suave */
+    border-color: #000000; /* Cor da borda */
+    border-width: 2px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 }
 
 /* Coleção de caixas */
@@ -141,9 +146,13 @@ body {
     border-radius: 50px;
     width: 20%;
     height: 40px;
-    background-color: #302e2f;
+    background-color: #484f7a;
     align-items: center;
-    box-shadow: 0 1px 6px #181718; /* Sombra suave */
+    box-shadow: 0 1px 6px #d3d2d2; /* Sombra suave */
+    color: #ffffff;
+    border-color: #000000; /* Cor da borda */
+    border-width: 1px; /* Largura da borda */
+    border-style: solid; /* Estilo da borda */
 }
 
 .text-box-1 {
