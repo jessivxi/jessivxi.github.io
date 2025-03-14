@@ -1,8 +1,7 @@
-body{
+body {
     background-color: #ededed;
-    font-family: "adelphi-pe-variable",sans-serif;
+    font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
-    
 }
 
 /* Reset básico */
@@ -12,10 +11,10 @@ body, ul, li, a {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-  }
-  
-  /* Navbar */
-  .navbar {
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     align-items: center;
     background-color: #484f7a;
@@ -28,93 +27,138 @@ body, ul, li, a {
     border-color: #000000; /* Cor da borda */
     border-width: 2px; /* Largura da borda */
     border-style: solid; /* Estilo da borda */
-  }
+}
 
-  .text-header{
+.text-header {
     display: flex;
     color: #fff;
-    padding: 25px;
-  }
-  
-  .navbar-brand a {
+    padding: 15px 0px 10px 0px;
+}
+
+.navbar-brand a {
     font-size: 20px;
     color: #ededed;
     font-family: "ocr-b-std", monospace;
+}
 
-  }
-  
-  .navbar-links {
+.navbar-links {
     display: flex;
     gap: 1.5rem;
-  }
-  
-  .navbar-links a {
+}
+
+.navbar-links a {
     color: #ffffff;
     font-size: 17px;
     transition: color 0.3s;
-  }
-  
-  .navbar-links a:hover {
-    color: #fff;
-  }
+}
 
-  #servicos {
+.navbar-links a:hover {
+    color: #fff;
+}
+
+#servicos {
     display: flex;
     padding: 190px 0px 0px 0px;
     gap: 50px;
     justify-content: center;
-  }
-  
-  #servicos h2 {
+    flex-wrap: wrap; /* Adicionando flex-wrap para responsividade */
+}
+
+#servicos h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
+}
 
-  }
-  
-  .servico {
+.servico {
     margin: 20px 0;
     padding: 20px;
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 310px;
     background-color: #e0dede;
     border: 1px solid #333;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .servico h3 {
+}
+
+.servico h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-  }
-  
-  .servico p {
+}
+
+.servico p {
     font-size: 1rem;
     color: #484f7a;
     line-height: 1.6;
-  }
-  
-  .servico ul {
+}
+
+.servico ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .servico ul li {
+}
+
+.servico ul li {
     font-size: 1rem;
     color: #070707;
     padding: 5px 0;
     position: relative;
-  }
-  
-  .servico ul li::before {
+}
+
+.servico ul li::before {
     content: "✔";
     color: #000000;
     margin-right: 8px;
-  }
+}
 
-  .servico:hover {
+.servico:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
     background-color: #b6b5b5; /* Mudança de cor de fundo */
     cursor: pointer;
+}
 
-  }
+/* Responsividade */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #servicos {
+        padding: 100px 0px 0px 0px;
+        gap: 30px;
+    }
+
+    .servico {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #servicos {
+        padding: 50px 0px 0px 0px;
+        gap: 20px;
+    }
+
+    .servico {
+        width: 90%;
+        height: auto;
+    }
+}

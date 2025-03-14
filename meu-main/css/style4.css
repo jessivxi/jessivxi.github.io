@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-links a:hover {
-    color: #ededed;
+    color: #bbb9b9;
 }
 
 /* Seção de Projetos */
@@ -74,33 +74,10 @@ body {
     justify-content: center;
 }
 
-.projeto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.projeto img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
 .descricao {
     text-align: left;
 }
 
-.descricao h2 {
-    font-size: 24px;
-    color: #000000;
-    margin-bottom: 10px;
-}
 
 .descricao p {
     font-size: 16px;
@@ -113,16 +90,17 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 85px 0px 0px 100px;
+    padding: 10% 0px 0px 0px;
 }
 
 .coluna {
-    background-color: #e0dede;
+    background-color: #e2e2e2;
     color: #000000;
     padding: 20px;
+    height: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(25% - 20px); /* Quatro colunas com espaçamento */
+    width: calc(15% - 20px); /* Quatro colunas com espaçamento */
     text-align: center;
     border-color: #000000; /* Cor da borda */
     border-width: 2px; /* Largura da borda */
@@ -138,6 +116,9 @@ body {
 .coluna p {
     font-size: 16px;
     color: #484f7a;
+    font-weight: bold;
+
+    
 }
 
 .coluna img {
@@ -151,4 +132,19 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
     background-color: #b6b5b5; /* Mudança de cor de fundo */
     cursor: pointer;
+}
+/* Animação moderna */
+@keyframes hoverEffect {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.coluna:hover {
+    animation: hoverEffect 0.3s forwards;
 }
