@@ -2,6 +2,7 @@ body {
     background-color: #ededed;
     font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 /* Reset básico */
@@ -24,9 +25,22 @@ body, ul, li, a {
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
+    border: 2px solid #000000;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .text-header {
@@ -39,6 +53,11 @@ body, ul, li, a {
     font-size: 20px;
     color: #ededed;
     font-family: "ocr-b-std", monospace;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand a:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 .navbar-links {
@@ -49,11 +68,12 @@ body, ul, li, a {
 .navbar-links a {
     color: #ffffff;
     font-size: 17px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .navbar-links a:hover {
     color: #fff;
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
 }
 
 #servicos {
@@ -61,13 +81,23 @@ body, ul, li, a {
     padding: 190px 0px 0px 0px;
     gap: 50px;
     justify-content: center;
-    flex-wrap: wrap; /* Adicionando flex-wrap para responsividade */
+    flex-wrap: wrap;
 }
 
 #servicos h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .servico {
@@ -79,6 +109,14 @@ body, ul, li, a {
     border: 1px solid #333;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.servico:hover {
+    transform: translateY(-10px); /* Efeito de levantar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #b6b5b5;
+    cursor: pointer;
 }
 
 .servico h3 {
@@ -108,12 +146,6 @@ body, ul, li, a {
     content: "✔";
     color: #000000;
     margin-right: 8px;
-}
-
-.servico:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    background-color: #b6b5b5; /* Mudança de cor de fundo */
-    cursor: pointer;
 }
 
 /* Responsividade */

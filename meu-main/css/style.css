@@ -15,6 +15,19 @@ body {
     background-color: #ededed;
     font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Animação de entrada da Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Navbar */
@@ -25,13 +38,15 @@ body {
     color: #ededed;
     padding: 1rem 2rem;
     margin: 80px 0px 0px 16%;
-    height: 45px;
+    height: 5px;
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
+    border: 2px solid #000000;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: slideIn 1s ease-out; /* Animação de entrada */
 }
 
 .text-header {
@@ -41,11 +56,16 @@ body {
 }
 
 .navbar-brand a {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: #fff;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+.navbar-brand a:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 .navbar-links {
@@ -55,12 +75,13 @@ body {
 
 .navbar-links a {
     color: #ededed;
-    font-size: 17px;
-    transition: color 0.3s;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s; /* Animação de hover */
 }
 
 .navbar-links a:hover {
-    color: #ededed;
+    color: #fff;
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
 }
 
 /* Container principal */
@@ -72,28 +93,33 @@ body {
     margin: 70px 0px 0px 0px;
 }
 
+/* Animação de entrada do texto de apresentação */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .text-apresen {
     display: flex;
     color: #000000;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    gap: 50px; /* Espaço entre a foto e o texto */
-    padding: 80px 0px 0px 329px;
-}
-
-/* Seção de apresentação */
-.text-about-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 50px;
 }
 
 .text-about-1 h1 {
-    font-size: 65px;
+    font-size: 58px;
     margin: 0;
+    animation: fadeInLeft 1.5s ease-in-out; /* Animação de entrada */
 }
 
 .about-me-text-1 {
-    font-size: 20px;
+    font-size: 17px;
     color: #000000;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
@@ -101,14 +127,25 @@ body {
 }
 
 .about-me-text-2 {
-    font-size: 17px;
+    font-size: 16px;
     padding: 0px 0px 15px 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400; /* Usando a variante regular */
+    font-weight: 400;
     color: #000000;
 }
 
-/* Nova div pai para a foto de perfil */
+/* Animação de entrada da foto de perfil */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .profile-container {
     display: flex;
     justify-content: center;
@@ -118,19 +155,56 @@ body {
 .imagem-perfil {
     display: flex;
     align-items: center;
+    flex-direction: column; /* Coloca a foto e os ícones em uma coluna */
+    align-items: center; /* Centraliza horizontalmente */ 
+    padding: 10%;
+
 }
 
 .foto-perfil-jessi {
     display: flex;
-    width: 400px; /* Ajuste o tamanho conforme necessário */
-    height: 400px; /* Certifique-se de que a imagem seja quadrada */
-    border-radius: 50%; /* Isso faz a imagem ficar redonda */
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+    margin: 0;
+    transition: transform 0.3s ease; /* Animação de hover */
+    animation: fadeInRight 1.5s ease-in-out; /* Animação de entrada */
 }
 
-/* Coleção de caixas */
+.foto-perfil-jessi:hover {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Animação de entrada das caixas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 18px; /* Reduz o espaço entre os ícones */
+    margin-top:-80px ; /* Reduz o espaço acima dos ícones */
+}
+
+.social-icon {
+    color: #484f7a; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.social-icon:hover {
+    color: #b6b5b5; /* Mudança de cor ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+}
 .box-collection {
     display: flex;
     text-align: center;
@@ -145,37 +219,27 @@ body {
     border-radius: 50px;
     width: 20%;
     height: 40px;
-    background-color: #484f7a;
+    background-color: #e0dede;
     align-items: center;
-    box-shadow: 0 1px 6px #d3d2d2; /* Sombra suave */
-    color: #ededed;
-    border-color: #000000; /* Cor da borda */
-    border-width: 1px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
-}
-
-.text-box-1 {
-    display: flex;
-    text-align: center;
-    padding: 0px 0px 0px 45px;
-}
-
-.text-box-2 {
-    display: flex;
-    text-align: center;
-    padding: 0px 0px 0px 40px;
-}
-
-.text-box-3 {
-    display: flex;
-    text-align: center;
-    padding: 0px 0px 0px 40px;
+    box-shadow: 0 1px 6px #d3d2d2;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    animation: fadeInUp 1s ease-in-out; /* Animação de entrada */
 }
 
 .box-1:hover, .box-2:hover, .box-3:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    background-color: #b6b5b5; /* Mudança de cor de fundo */
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #b6b5b5;
     cursor: pointer;
+}
+
+.text-box-1, .text-box-2, .text-box-3 {
+    display: flex;
+    text-align: center;
+    padding: 0px 0px 0px 45px;
+    transition: color 0.3s;
 }
 
 .text-box-1:hover, .text-box-2:hover, .text-box-3:hover {
@@ -183,7 +247,37 @@ body {
     cursor: pointer;
 }
 
-/* Responsividade para diferentes tamanhos de tela de computadores */
+/* Animação de entrada do footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: -1px;
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+}
+
+footer a {
+    color: #484f7a;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #b6b5b5;
+}
+
+/* Responsividade */
 @media (max-width: 1200px) {
     .text-apresen {
         flex-direction: column;
@@ -224,8 +318,385 @@ body {
     }
 }
 
-.coluna:hover {
-    animation: hoverEffect 0.3s forwards;
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-2 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .text-apresen {
+        padding: 10px;
+    }
+
+    .text-about-1 h1 {
+        font-size: 40px;
+    }
+
+    .about-me-text-1 {
+        font-size: 16px;
+    }
+
+    .about-me-text-2 {
+        font-size: 14px;
+    }
+
+    .foto-perfil-jessi {
+        width: 200px;
+        height: 200px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 90%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-about-1 h1 {
+        font-size: 30px;
+    }
+
+    .about-me-text-1 {
+        font-size: 14px;
+    }
+
+    .about-me-text-2 {
+        font-size: 12px;
+    }
+
+    .foto-perfil-jessi {
+        width: 150px;
+        height: 150px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 100%;
+        height: 70px;
+    }
+}/* Adicione esta linha no início do seu arquivo CSS para importar a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset básico */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo do corpo */
+body {
+    background-color: #ededed;
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Animação de entrada da Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #484f7a;
+    color: #ededed;
+    padding: 1rem 2rem;
+    margin: 45px 0px 0px 16%;
+    height: 35px;
+    width: 65%;
+    justify-content: space-between;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
+.text-header {
+    display: flex;
+    color: #ededed;
+    padding: 13px;
+}
+
+.navbar-brand a {
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "ocr-b-std", monospace;
+    font-weight: normal;
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+.navbar-brand a:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.navbar-links a {
+    color: #ededed;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s; /* Animação de hover */
+}
+
+.navbar-links a:hover {
+    color: #fff;
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+}
+
+/* Container principal */
+.container-2 {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin: 70px 0px 0px 0px;
+}
+
+/* Animação de entrada do texto de apresentação */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-apresen {
+    display: flex;
+    color: #000000;
+    align-items: center;
+    gap: 50px;
+    padding: 55px 0px 0px 350px;
+}
+
+.text-about-1 h1 {
+    font-size: 58px;
+    margin: 0;
+    animation: fadeInLeft 1.5s ease-in-out; /* Animação de entrada */
+}
+
+.about-me-text-1 {
+    font-size: 17px;
+    color: #000000;
+    font-family: "ocr-b-std", monospace;
+    font-weight: normal;
+    margin: 10px 0;
+    padding: 0px 0px 15px 0px;
+}
+
+.about-me-text-2 {
+    font-size: 16px;
+    padding: 0px 0px 15px 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Animação de entrada da foto de perfil */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil-jessi {
+    display: flex;
+    width: 450px;
+    height: 450px;
+    border-radius: 25%;
+    padding: 0px 10px 99px 0px;
+    margin: 0;
+    transition: transform 0.3s ease; /* Animação de hover */
+    animation: fadeInRight 1.5s ease-in-out; /* Animação de entrada */
+}
+
+.foto-perfil-jessi:hover {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+/* Animação de entrada das caixas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-collection {
+    display: flex;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    gap: 17%;
+    padding: 20px 0px 0px 0px;
+}
+
+.box-1, .box-2, .box-3 {
+    display: flex;
+    border-radius: 50px;
+    width: 20%;
+    height: 40px;
+    background-color: #e0dede;
+    align-items: center;
+    box-shadow: 0 1px 6px #d3d2d2;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    animation: fadeInUp 1s ease-in-out; /* Animação de entrada */
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #b6b5b5;
+    cursor: pointer;
+}
+
+.text-box-1 {
+    display: flex;
+    text-align: center;
+    padding: 0px 0px 0px 35px;
+    transition: color 0.3s;
+}
+.text-box-2{
+    display: flex;
+    text-align: center;
+    padding: 0px 0px 0px 25px;
+    transition: color 0.3s;
+
+}
+.text-box-3{
+    display: flex;
+    text-align: center;
+    padding: 0px 0px 0px 25px;
+    transition: color 0.3s;
+
+}
+
+.text-box-1:hover, .text-box-2:hover, .text-box-3:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Animação de entrada do footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 2%;
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+}
+
+footer a {
+    color: #484f7a;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #b6b5b5;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .text-apresen {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-about-1 h1 {
+        font-size: 50px;
+    }
+
+    .about-me-text-1 {
+        font-size: 18px;
+    }
+
+    .about-me-text-2 {
+        font-size: 15px;
+    }
+
+    .foto-perfil-jessi {
+        width: 300px;
+        height: 300px;
+    }
+
+    .box-collection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box-1, .box-2, .box-3 {
+        width: 80%;
+        height: 50px;
+    }
+
+    .text-box-1, .text-box-2, .text-box-3 {
+        padding: 0;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 992px) {
