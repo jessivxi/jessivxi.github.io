@@ -1,9 +1,5 @@
-body {
-    background-color: #ededed;
-    font-family: "adelphi-pe-variable", sans-serif;
-    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
-    overflow-x: hidden; /* Evita rolagem horizontal */
-}
+/* Adicione esta linha no início do seu arquivo CSS para importar a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* Reset básico */
 body, ul, li, a {
@@ -14,22 +10,12 @@ body, ul, li, a {
     list-style: none;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    background-color: #484f7a;
-    padding: 1rem 2rem;
-    margin: 80px 0px 0px 16%;
-    height: 45px;
-    width: 65%;
-    justify-content: space-between;
-    border-radius: 50px;
-    border: 2px solid #000000;
-    position: sticky;
-    top: 20px;
-    z-index: 1000;
-    animation: slideIn 1s ease-out; /* Animação de entrada */
+/* Estilo do corpo */
+body {
+    background-color: #e0dede;
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 @keyframes slideIn {
@@ -43,17 +29,51 @@ body, ul, li, a {
     }
 }
 
+
+
+/* Animação de entrada das caixas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #e0dede;
+    padding: 1rem 2rem;
+    margin: 50px 0px 0px 16%;
+    height: 35px;
+    width: 65%;
+    justify-content: space-between;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
 .text-header {
     display: flex;
-    color: #fff;
-    padding: 15px 0px 10px 0px;
+    padding: 13px;
 }
 
 .navbar-brand a {
-    font-size: 20px;
-    color: #ededed;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
     font-family: "ocr-b-std", monospace;
-    transition: transform 0.3s ease;
+    font-weight: normal;
+    transition: transform 0.3s ease; /* Animação de hover */
 }
 
 .navbar-brand a:hover {
@@ -62,13 +82,13 @@ body, ul, li, a {
 
 .navbar-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.1rem;
 }
 
 .navbar-links a {
-    color: #ffffff;
-    font-size: 17px;
-    transition: color 0.3s, transform 0.3s;
+    color: #000000;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s; /* Animação de hover */
 }
 
 .navbar-links a:hover {
@@ -84,29 +104,26 @@ body, ul, li, a {
     flex-wrap: wrap;
 }
 
-#servicos h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-in; /* Animação de entrada */
-}
 
-@keyframes fadeIn {
+
+/* Animação de entrada das caixas */
+@keyframes fadeInUp {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
-
 .servico {
     margin: 20px 0;
     padding: 20px;
-    width: 350px;
-    height: 310px;
+    width: 340px;
+    height: 350px;
     background-color: #e0dede;
-    border: 1px solid #333;
+    border: 1px solid #000000;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -120,13 +137,14 @@ body, ul, li, a {
 }
 
 .servico h3 {
-    font-size: 1.8rem;
+    padding: 5px 0px 10px 0px; 
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .servico p {
-    font-size: 1rem;
-    color: #484f7a;
+    font-size: 1.0rem;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -146,6 +164,38 @@ body, ul, li, a {
     content: "✔";
     color: #000000;
     margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+/* Animação de entrada do footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.footer-main{
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    margin: 150px 0px 0px 0px;
+    border-top: 1px solid #000000;
+    color: #000000;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+}
+
+
+footer a:hover {
+    color: #b6b5b5;
 }
 
 /* Responsividade */
@@ -193,4 +243,29 @@ body, ul, li, a {
         width: 90%;
         height: auto;
     }
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #000000;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: "adelphi-pe-variable", sans-serif;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.text-footer a {
+    color: #575757;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: #b6b5b5;
 }

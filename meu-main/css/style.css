@@ -12,7 +12,7 @@ body, ul, li, a {
 
 /* Estilo do corpo */
 body {
-    background-color: #ededed;
+    background-color: #e0dede;
     font-family: "adelphi-pe-variable", sans-serif;
     font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
     overflow-x: hidden; /* Evita rolagem horizontal */
@@ -34,15 +34,14 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #030405;
-    color: #ededed;
+    background-color: #e0dede;
     padding: 1rem 2rem;
-    margin: 45px 0px 0px 16%;
+    margin: 50px 0px 0px 16%;
     height: 35px;
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     position: sticky;
     top: 20px;
     z-index: 1000;
@@ -51,14 +50,13 @@ body {
 
 .text-header {
     display: flex;
-    color: #ededed;
     padding: 13px;
 }
 
 .navbar-brand a {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
-    color: #fff;
+    color: #000000;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
     transition: transform 0.3s ease; /* Animação de hover */
@@ -74,7 +72,7 @@ body {
 }
 
 .navbar-links a {
-    color: #ededed;
+    color: #000000;
     font-size: 15px;
     transition: color 0.3s, transform 0.3s; /* Animação de hover */
 }
@@ -90,7 +88,7 @@ body {
     justify-content: center;
     width: 80%;
     height: auto;
-    margin: 70px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
 }
 
 /* Animação de entrada do texto de apresentação */
@@ -110,17 +108,17 @@ body {
     color: #000000;
     align-items: center;
     gap: 50px;
-    padding: 55px 0px 0px 350px;
+    padding: 0px 0px 0px 250px;
 }
 
 .text-about-1 h1 {
-    font-size: 58px;
+    font-size: 48px;
     margin: 0;
     animation: fadeInLeft 1.5s ease-in-out; /* Animação de entrada */
 }
 
 .about-me-text-1 {
-    font-size: 17px;
+    font-size: 16px;
     color: #000000;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
@@ -129,11 +127,13 @@ body {
 }
 
 .about-me-text-2 {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0px 0px 15px 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: #000000;
+    line-break: anywhere;
+    text-align: justify;
 }
 
 /* Animação de entrada da foto de perfil */
@@ -152,23 +152,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .imagem-perfil {
     display: flex;
     align-items: center;
+    align-items: center; /* Centraliza horizontalmente */ 
+    padding: 10%;
 }
 
 .foto-perfil-jessi {
     display: flex;
-    width: 450px;
-    height: 450px;
-    border-radius: 25%;
-    padding: 0px 10px 99px 0px;
-    margin: 0;
+    width: 550px;
+    height:550px;
+    padding-left: 40px;
+    margin: none;
     transition: transform 0.3s ease; /* Animação de hover */
     animation: fadeInRight 1.5s ease-in-out; /* Animação de entrada */
+    cursor: pointer;
 }
+
 
 .foto-perfil-jessi:hover {
     transform: scale(1.05); /* Efeito de escala ao passar o mouse */
@@ -184,6 +188,25 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Coloca os ícones em uma coluna */
+    justify-content: center; /* Centraliza os ícones verticalmente */
+    gap: 10px; /* Espaço entre os ícones */
+}
+
+.social-icon {
+    color: #474748; /* Cor dos ícones */
+    font-size: 25px; /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.social-icon:hover {
+    color: #b6b5b5; /* Mudança de cor ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
 }
 
 .box-collection {
@@ -216,8 +239,9 @@ body {
     cursor: pointer;
 }
 
-.text-box-1 {
+.text-box-1{
     display: flex;
+    font-size: 15px;
     text-align: center;
     padding: 0px 0px 0px 35px;
     transition: color 0.3s;
@@ -225,15 +249,17 @@ body {
 .text-box-2{
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 27px;
     transition: color 0.3s;
+    font-size: 15px;
 
 }
 .text-box-3{
     display: flex;
     text-align: center;
-    padding: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 28px;
     transition: color 0.3s;
+    font-size: 15px;
 
 }
 
@@ -252,20 +278,13 @@ body {
     }
 }
 
-footer {
+.footer {
+    border-top: 1px solid #000000;
     color: #000000;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 2%;
-    font-family: "adelphi-pe-variable", sans-serif;
-    font-size: 1rem;
+    height: 0;
+    margin: 50px 0px 0px 0px;
     animation: fadeIn 2s ease-in; /* Animação de entrada */
-}
-
-footer a {
-    color: #484f7a;
-    text-decoration: underline;
-    transition: color 0.3s ease;
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
 }
 
 footer a:hover {

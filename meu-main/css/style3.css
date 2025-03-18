@@ -1,9 +1,3 @@
-body {
-    background-color: #ededed;
-    font-family: "adelphi-pe-variable", sans-serif;
-    font-variation-settings: 'wght' 700, 'opsz' 12, 'slnt' 0;
-}
-
 /* Reset básico */
 body, ul, li, a {
     margin: 0;
@@ -13,47 +7,75 @@ body, ul, li, a {
     list-style: none;
 }
 
+/* Estilo do corpo */
+body {
+    background-color: #e0dede;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Animação de entrada da Navbar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Navbar */
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #484f7a;
-    color: #ededed;
+    background-color: #e0dede;
     padding: 1rem 2rem;
-    margin: 80px 0px 0px 16%;
-    height: 45px;
+    margin: 50px 0px 0px 16%;
+    height: 35px;
     width: 65%;
     justify-content: space-between;
     border-radius: 50px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
-  
+    border: 1px solid #000000;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    animation: slideIn 1s ease-out; /* Animação de entrada */
+}
+
+.text-header {
+    display: flex;
+    padding: 13px;
+    font-weight: bolder;
 }
 
 .navbar-brand a {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ededed;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #000000;
     font-family: "ocr-b-std", monospace;
     font-weight: normal;
-  
+    transition: transform 0.3s ease; /* Animação de hover */
+}
+
+.navbar-brand a:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 .navbar-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.1rem;
 }
 
 .navbar-links a {
-    color: #ededed;
-    font-size: 17px;
-    transition: color 0.3s;
+    color: #000000;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s; /* Animação de hover */
 }
 
 .navbar-links a:hover {
-    color: #9b9a9a;
+    color: #fff;
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
 }
 
 #contato {
@@ -72,14 +94,10 @@ body, ul, li, a {
 .foto-perfil img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
 }
 
 #contato h2 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     margin-bottom: 30px;
     color: #000000;
 }
@@ -91,7 +109,6 @@ body, ul, li, a {
     background-color: #262628;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px #484f7a;
 }
 
 .campo {
@@ -120,27 +137,6 @@ body, ul, li, a {
 .campo input:focus,
 .campo textarea:focus {
     border-color: #0f1418;
-}
-
-.campo button {
-    width: 100%;
-    padding: 12px;
-    background-color: #0078d4;
-    color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.campo button:hover {
-    background-color: #005a9e;
-    transform: translateY(-3px);
-}
-
-.campo button:active {
-    transform: translateY(0);
 }
 
 .redes-sociais {
@@ -200,19 +196,25 @@ body, ul, li, a {
 .redes-sociais-footer a:hover {
     color: #0f1312;
 }
-
-.to-top {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    transition: color 0.3s;
+.footer {
+    border-top: 1px solid #000000;
+    color: #000000;
+    height: 0;
+    margin: 350px 0px 0px 0px;
+    animation: fadeIn 2s ease-in; /* Animação de entrada */
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+}
+.text-footer{
+    color: #000000;
+    text-align: center;
+   font-weight: bold;
+    justify-content: center;
+    padding: 35px 0px 0px 0px;
+}
+footer a:hover {
+    color: #b6b5b5;
 }
 
-.to-top:hover {
-    color: #69beb0;
-}
 
 /* Responsividade */
 @media (max-width: 1200px) {
