@@ -77,6 +77,7 @@ body {
     color: #fff;
     transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
 }
+/* Animação de entrada do footer */
 
 #contato {
     padding: 7% 0px 0px 50px;
@@ -196,6 +197,15 @@ body {
 .redes-sociais-footer a:hover {
     color: #0f1312;
 }
+/* Animação de entrada do footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .footer {
     border-top: 1px solid #000000;
     color: #000000;
@@ -209,10 +219,10 @@ body {
     text-align: center;
    font-weight: bold;
     justify-content: center;
-    padding: 35px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
 }
-footer a:hover {
-    color: #b6b5b5;
+.footer a{
+    color: #676869;
 }
 
 

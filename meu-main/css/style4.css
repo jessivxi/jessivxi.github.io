@@ -31,9 +31,7 @@ body {
     align-items: center;
     background-color: #e0dede;
     padding: 1rem 2rem;
-    margin: 50px 0px 0px 16%;
     height: 35px;
-    width: 65%;
     justify-content: space-between;
     border-radius: 50px;
     border: 1px solid #000000;
@@ -41,6 +39,9 @@ body {
     top: 20px;
     z-index: 1000;
     animation: slideIn 1s ease-out; /* Animação de entrada */
+    max-width: 1200px; /* Mesma largura máxima das colunas */
+    width: 90%; /* Largura relativa para responsividade */
+    margin: 50px auto 0 auto; /* Centraliza a navbar */
 }
 
 .text-header {
@@ -80,71 +81,97 @@ body {
 
 /* Seção de Projetos */
 .projetos {
-    padding: 50px;
+    padding: 50px 0; /* Ajuste do padding para alinhar com a navbar */
     text-align: center;
 }
 
-.projetos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.descricao {
-    text-align: left;
-}
-
-.descricao p {
-    font-size: 16px;
-    color: #1c1c1c;
-}
-
-/* Estilo das colunas */
+/* Container das colunas */
 .colunas-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px; /* Espaçamento entre as colunas */
     justify-content: center;
-    padding: 10% 0px 0px 0px;
+    max-width: 1200px; /* Mesma largura máxima da navbar */
+    width: 90%; /* Largura relativa para responsividade */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px 0; /* Alinhar com a navbar */
 }
 
+/* Estilo das colunas */
 .coluna {
     background-color: #e0dede;
     color: #000000;
-    padding: 20px;
-    height: 250px;
+    padding: 10px; /* Padding reduzido */
+    height: 300px; /* Altura maior */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(15% - 20px); /* Quatro colunas com espaçamento */
+    width: calc(33% - 20px); /* Largura ajustável para 4 colunas */
     text-align: center;
-    border-color: #000000; /* Cor da borda */
-    border-width: 2px; /* Largura da borda */
-    border-style: solid; /* Estilo da borda */
+    border: 2px solid #000000;
+    position: relative; /* Para posicionar o texto sobre a imagem */
+    overflow: hidden; /* Garante que a imagem não ultrapasse a coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo da imagem */
+.coluna img {
+    width: 100%; /* A imagem ocupa toda a largura da coluna */
+    height: 100%; /* A imagem ocupa toda a altura da coluna */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas */
+    position: absolute; /* Posiciona a imagem atrás do texto */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Coloca a imagem atrás do texto */
+}
+
+/* Estilo do texto sobreposto */
+.coluna .descricao {
+    position: relative; /* Posiciona o texto sobre a imagem */
+    z-index: 2; /* Coloca o texto na frente da imagem */
+    padding: 200px 0px 0px 0px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .coluna h2 {
-    font-size: 23px;
-    margin-bottom: 10px;
+    font-size: 23px; /* Tamanho da fonte reduzido */
+    color: #000000;
+    background-color:#e0dedead;
 }
 
 .coluna p {
-    font-size: 16px;
+    font-size: 17px; /* Tamanho da fonte reduzido */
     color: #000000;
     font-weight: bold;
 }
 
-.coluna img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+/* Efeito hover */
+.coluna:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Efeito de zoom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.coluna:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    background-color: #b6b5b5; /* Mudança de cor de fundo */
-    cursor: pointer;
+/* Estilo da coluna "mais" */
+.coluna.mais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(224, 222, 222, 0.8); /* Fundo semi-transparente */
+}
+
+.coluna.mais .simbolo-mais {
+    font-size: 70px; /* Tamanho do símbolo "+" reduzido */
+    color: #000000;
+    text-decoration: none;
+}
+
+.coluna.mais:hover {
+    background-color: rgba(182, 181, 181, 0.8); /* Mudança de cor ao passar o mouse */
 }
 
 /* Animação moderna */
@@ -177,23 +204,17 @@ body {
     color: #b6b5b5;
     transform: translateY(-10px);
 }
-.simbolo-mais{
+
+.simbolo-mais {
     color: #000000;
 }
 
-/* Footer */
-.footer{
-    display: flex;
-    justify-content: center;
-    height: 0px;
-    margin: 190px 0px 0px 0px;
-    border-top: 1px solid #000000;
-    color: #000000;
-    animation: fadeIn 2s ease-in; /* Animação de entrada */
-    width: 100%; /* Garante que o footer ocupe toda a largura da página */
-}
-
-
-footer a:hover {
-    color: #b6b5b5;
+/* Animação de entrada do footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
